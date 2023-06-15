@@ -1,23 +1,28 @@
-Report: https://www.overleaf.com/9899741866srvqpghrjdsm
+<object data="[https://path/to/your/file.pdf](https://github.com/PritishWadhwa/CM-Project/blob/master/CM_Project.pdf)" type="application/pdf" width="700px" height="500px">
+    <embed src="[https://path/to/your/file.pdf](https://github.com/PritishWadhwa/CM-Project/blob/master/CM_Project.pdf)">
+        This browser does not support PDFs. Please download the PDF to view it: <a href="https://path/to/your/file.pdf">Download PDF</a>.
+    </embed>
+</object>
 
+# Computing For Medicine Final Research Paper
+## Abstract
+Medical data often contains various forms of image data such as
+x-ray scans, MRI scans, and CT scans. Computer-aided diagnosis
+systems can benefit from making use of such image data. Our problem statement is to perform classification tasks on medical image
+datasets, specifically Retinal OCT and Blood cell microscope images. In recent times, the application of computational or machine
+intelligence in medical diagnosis is a new trend for large medical
+data applications. Most of the diagnosis techniques in medical field
+are systematized as intelligent data classification approaches.
 
-### BloodMNIST
-
-
-The BloodMNIST is based on a dataset of individual normal cells, captured from individuals without infection, hematologic or oncologic disease and free of any pharmacologic treatment at the moment of blood collection.  
-It contains a total of 17,092 images and is organized into 8 classes.  
-We split the source dataset with a ratio of 7:1:2 into training, validation and test set.  
-The source images with resolution 3×360×363 pixels are center-cropped into 3×200×200, and then resized into 3×28×28.  
-Classes:  
-'0': 'basophil', '1': 'eosinophil', '2': 'erythroblast', '3': 'immature granulocytes(myelocytes, metamyelocytes and promyelocytes)', '4': 'lymphocyte', '5': 'monocyte', '6': 'neutrophil', '7': 'platelet'
-
-
-
-
-### OCT mnist
-The OCTMNIST is based on a prior dataset of 109,309 valid optical coherence tomography (OCT) images for retinal diseases. The dataset is comprised of 4 diagnosis categories, leading to a multi-class classification task. We split the source training set with a ratio of 9:1 into training and validation set, and use its source validation set as the test set. The source images are gray-scale, and their sizes are (384−1,536)×(277−512). We center-crop the images and resize them into 1×28×28.
-
-Classes:
-'0': 'choroidal neovascularization', '1': 'diabetic macular edema', '2': 'drusen', '3': 'normal'
-
-
+## Conclusion
+In this project, we explored the power of transfer learning on medical image datasets using the BloodMNIST and OCTMNIST datasets
+from the MEDMNISTv2 database. Visualizing the data showed us
+that the data was not clearly separable, possibly requiring complex
+deep learning models to achieve good results. We applied several
+models with different specifications including AlexNet, BEiT, Inception, VGG, ResNet and SqueezeNet by fine-tuning them on our
+chosen datasets. We found the BEiT model (BERT Pre-Training
+of Image Transformers) to perform best on both the datasets, giving accuracy of 0.9664 for BloodMNIST and 0.818 for OCTMNIST.
+This beats the baseline performance obtained by Yang et al. on
+OCTMNIST (ACC: 0.776) and matches that of BloodMNIST (ACC:
+0.966). Thus, we can see that transfer learning can be a powerful
+tool in the classification of medical image datasets.
